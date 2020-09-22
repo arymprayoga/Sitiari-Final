@@ -30,7 +30,7 @@ class GuestController extends Controller
 
     public function showBabysitter(){
         $babysitter = Pekerja::where('jenisPekerjaan', 'babysitter')->where('status', 'tersedia')->paginate(3);
-        return view('welcome-babysitter', compact('babysitter'));
+        return compact('babysitter');
     }
 
     public function showPembantu(){
